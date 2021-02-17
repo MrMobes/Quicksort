@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/Users/intramural/Documents/jmoberly/CS 224/Quicksort/QS.cpp" "/Users/intramural/Documents/jmoberly/CS 224/Quicksort/cmake-build-debug/CMakeFiles/Quicksort.dir/QS.cpp.o"
   "/Users/intramural/Documents/jmoberly/CS 224/Quicksort/main.cpp" "/Users/intramural/Documents/jmoberly/CS 224/Quicksort/cmake-build-debug/CMakeFiles/Quicksort.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")

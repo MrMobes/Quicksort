@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Quicksort.dir/QS.cpp.o"
   "CMakeFiles/Quicksort.dir/main.cpp.o"
   "Quicksort"
   "Quicksort.pdb"

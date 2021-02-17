@@ -3,4 +3,4 @@ project(Quicksort)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Quicksort main.cpp)
+add_executable(Quicksort main.cpp QS.cpp QS.h)

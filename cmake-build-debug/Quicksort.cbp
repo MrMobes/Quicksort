@@ -78,6 +78,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/intramural/Documents/jmoberly/CS 224/Quicksort/QS.cpp">
+			<Option target="Quicksort"/>
+		</Unit>
+		<Unit filename="/Users/intramural/Documents/jmoberly/CS 224/Quicksort/QS.h">
+			<Option target="Quicksort"/>
+		</Unit>
 		<Unit filename="/Users/intramural/Documents/jmoberly/CS 224/Quicksort/main.cpp">
 			<Option target="Quicksort"/>
 		</Unit>

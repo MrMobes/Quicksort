@@ -143,6 +143,33 @@ Quicksort/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Quicksort.dir/build.make CMakeFiles/Quicksort.dir/build
 .PHONY : Quicksort/fast
 
+QS.o: QS.cpp.o
+
+.PHONY : QS.o
+
+# target to build an object file
+QS.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Quicksort.dir/build.make CMakeFiles/Quicksort.dir/QS.cpp.o
+.PHONY : QS.cpp.o
+
+QS.i: QS.cpp.i
+
+.PHONY : QS.i
+
+# target to preprocess a source file
+QS.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Quicksort.dir/build.make CMakeFiles/Quicksort.dir/QS.cpp.i
+.PHONY : QS.cpp.i
+
+QS.s: QS.cpp.s
+
+.PHONY : QS.s
+
+# target to generate assembly for a file
+QS.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Quicksort.dir/build.make CMakeFiles/Quicksort.dir/QS.cpp.s
+.PHONY : QS.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -179,6 +206,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Quicksort"
+	@echo "... QS.o"
+	@echo "... QS.i"
+	@echo "... QS.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

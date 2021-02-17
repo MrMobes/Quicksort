@@ -94,12 +94,12 @@ clean: CMakeFiles/Quicksort.dir/clean
 CMakeFiles/Quicksort.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Quicksort.dir/build.make CMakeFiles/Quicksort.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Quicksort.dir/build.make CMakeFiles/Quicksort.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/intramural/Documents/jmoberly/CS 224/Quicksort/cmake-build-debug/CMakeFiles" --progress-num=1,2 "Built target Quicksort"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/intramural/Documents/jmoberly/CS 224/Quicksort/cmake-build-debug/CMakeFiles" --progress-num=1,2,3 "Built target Quicksort"
 .PHONY : CMakeFiles/Quicksort.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Quicksort.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/intramural/Documents/jmoberly/CS 224/Quicksort/cmake-build-debug/CMakeFiles" 2
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/intramural/Documents/jmoberly/CS 224/Quicksort/cmake-build-debug/CMakeFiles" 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Quicksort.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/intramural/Documents/jmoberly/CS 224/Quicksort/cmake-build-debug/CMakeFiles" 0
 .PHONY : CMakeFiles/Quicksort.dir/rule
