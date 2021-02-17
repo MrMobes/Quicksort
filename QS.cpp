@@ -92,14 +92,26 @@ int QS::partition(int left, int right, int pivotIndex) {
 	*		the string representation of the current array
 	*/
 string QS::getArray() const {
-
+    string commaArray = "";
+    if(myArray==0 || insertPos==0) {
+         return commaArray;
+    }
+    else {
+        int i = 0;
+        while (i < sizeOfArray-1) {
+            commaArray = commaArray + to_string(myArray[i]) + ",";
+            i++;
+        }
+        commaArray = commaArray + to_string(myArray[i]);
+        return commaArray;
+    }
 }
 
     /*
 	* Returns the number of elements which have been added to the array.
 	*/
 int QS::getSize() const {
-
+    return insertPos;
 }
 
     /*
@@ -113,7 +125,13 @@ int QS::getSize() const {
 	* returns true if a value was added, false otherwise.
 	*/
 bool QS::addToArray(int value) {
-
+    if(insertPos>=sizeOfArray) {
+        return false;
+    }
+    else {
+        myArray[insertPos] = value;
+        insertPos++;
+    }
 }
 
     /*
@@ -127,6 +145,17 @@ bool QS::addToArray(int value) {
 	*		true if the array was created, false otherwise
 	*/
 bool QS::createArray(int capacity) {
+    if(capacity<0) {
+        return false;
+    }
+    else {
+        if (myArray != 0) {
+            delete[] myArray;
+        }
+        myArray = new int[capacity];
+        sizeOfArray = capacity;
+        return true;
+    }
 
 }
 
@@ -134,5 +163,6 @@ bool QS::createArray(int capacity) {
 	* Resets the array to an empty or NULL state.
 	*/
 void QS::clear() {
-
+    delete [] myArray;
+    myArray = nullptr;
 }

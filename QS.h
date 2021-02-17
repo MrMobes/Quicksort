@@ -8,6 +8,9 @@
 
 class QS: public QSInterface {
 protected:
+    int *myArray = nullptr;
+    int insertPos = 0;
+    int sizeOfArray = 0;
 public:
     QS();
     ~QS();
