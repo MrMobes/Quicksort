@@ -24,6 +24,38 @@ int main() {
 	std::string temp; // used to store the current instruction
 	QS* qsptr = NULL;//the QS object
 
+	/* Test Code:
+	QS* testPtr = new QS;
+	if(testPtr->createArray(5)) {
+	    cout << "Created Array" << endl;
+	}
+	if(testPtr->addToArray(1)) {
+	    cout << "Added 1 to the array" << endl;
+	}
+    if(testPtr->addToArray(2)) {
+        cout << "Added 2 to the array" << endl;
+    }
+    if(testPtr->addToArray(3)) {
+        cout << "Added 3 to the array" << endl;
+    }
+    if(testPtr->addToArray(4)) {
+        cout << "Added 4 to the array" << endl;
+    }
+    if(testPtr->addToArray(5)) {
+        cout << "Added 5 to the array" << endl;
+    }
+    int size = testPtr->getSize();
+    cout << "Size: " << size << "\n" << testPtr->getArray() << endl;
+    testPtr->clear();
+    if(testPtr->getArray() == "") {
+        cout << "Successful Clear" << endl;
+    }
+    else {
+        cout << testPtr->getArray() << endl;
+    }
+    exit(0);
+    */
+
 	for (int i = 0; i < NUM_FILES; i++) {
 		ifs.open(fileArray[i]); // open the file to read from
 		ofs.open("out_" + fileArray[i]); // open the file to write to

@@ -5,11 +5,13 @@
 #include "QS.h"
 
 QS::QS() {
-
+    myArray = NULL;
+    insertPos = 0;
+    sizeOfArray = 0;
 }
 
 QS::~QS() {
-
+    clear();
 }
 
     /*
@@ -93,7 +95,7 @@ int QS::partition(int left, int right, int pivotIndex) {
 	*/
 string QS::getArray() const {
     string commaArray = "";
-    if(myArray==0 || insertPos==0) {
+    if(myArray== nullptr || insertPos==0) {
          return commaArray;
     }
     else {
@@ -149,7 +151,7 @@ bool QS::createArray(int capacity) {
         return false;
     }
     else {
-        if (myArray != 0) {
+        if (myArray != NULL) {
             delete[] myArray;
         }
         myArray = new int[capacity];
