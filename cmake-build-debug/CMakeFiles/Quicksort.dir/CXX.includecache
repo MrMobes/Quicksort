@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/intramural/Documents/jmoberly/CS 224/Quicksort/QS.cpp
+QS.h
+/Users/intramural/Documents/jmoberly/CS 224/Quicksort/QS.h
+
+/Users/intramural/Documents/jmoberly/CS 224/Quicksort/QS.h
+QSInterface.h
+/Users/intramural/Documents/jmoberly/CS 224/Quicksort/QSInterface.h
+
+/Users/intramural/Documents/jmoberly/CS 224/Quicksort/QSInterface.h
+iostream
+-
+string
+-
+
+/Users/intramural/Documents/jmoberly/CS 224/Quicksort/main.cpp
+QS.h
+/Users/intramural/Documents/jmoberly/CS 224/Quicksort/QS.h
+iostream
+-
+fstream
+-
+sstream
+-
+

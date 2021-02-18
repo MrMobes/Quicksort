@@ -23,7 +23,21 @@ QS::~QS() {
 	* Does nothing if the array is empty.
 	*/
 void QS::sortAll() {
+    if(myArray!=NULL) {
+        quicksort(0, sizeOfArray-1);
+    }
+    else {
+        return;
+    }
+}
 
+void QS::quicksort(int left, int right) {
+    if(left<right) {
+        int pivot = medianOfThree(left,right);
+        pivot = partition(left,right,pivot);
+        quicksort(left,pivot-1);
+        quicksort(pivot+1, right);
+    }
 }
 
     /*
@@ -52,7 +66,28 @@ void QS::sortAll() {
 	*		the index of the pivot (middle index); -1 if provided with invalid input
 	*/
 int QS::medianOfThree(int left, int right) {
-
+    if(myArray!=NULL && left >= 0 && right <= sizeOfArray-1 && left<right) {
+        int middle = (left + right)/2;
+        if(myArray[left] > myArray[middle]) {
+            int tmp = myArray[left];
+            myArray[left] = myArray[middle];
+            myArray[middle] = tmp;
+        }
+        if(myArray[right] < myArray[middle]) {
+            int tmp = myArray[middle];
+            myArray[middle] = myArray[right];
+            myArray[right] = tmp;
+        }
+        if(myArray[middle] < myArray[left]) {
+            int tmp = myArray[middle];
+            myArray[middle] = myArray[left];
+            myArray[left] = tmp;
+        }
+        return middle;
+    }
+    else {
+        return -1;
+    }
 }
 
     /*
@@ -79,7 +114,33 @@ int QS::medianOfThree(int left, int right) {
 	* 		provided with bad input
 	*/
 int QS::partition(int left, int right, int pivotIndex) {
-
+    if(myArray!=NULL && left>=0 && right<=sizeOfArray-1 && left<right && left<=pivotIndex && pivotIndex<=right) {
+        int tmp = myArray[left];
+        myArray[left] = myArray[pivotIndex];
+        myArray[pivotIndex] = tmp;
+        int up = left+1;
+        int down = right;
+        do {
+            while(myArray[up]<=myArray[left] && up<right) {
+                up++;
+            }
+            while(myArray[down]>myArray[left] && down>left) {
+                down--;
+            }
+            if(up<down) {
+                tmp = myArray[up];
+                myArray[up] = myArray[down];
+                myArray[down] = tmp;
+            }
+        } while(up<down);
+        tmp = myArray[left];
+        myArray[left] = myArray[down];
+        myArray[down] = tmp;
+        return down;
+    }
+    else {
+        return -1;
+    }
 }
 
     /*
@@ -100,7 +161,7 @@ string QS::getArray() const {
     }
     else {
         int i = 0;
-        while (i < sizeOfArray-1) {
+        while (i < getSize()-1) {
             commaArray = commaArray + to_string(myArray[i]) + ",";
             i++;
         }
@@ -133,6 +194,7 @@ bool QS::addToArray(int value) {
     else {
         myArray[insertPos] = value;
         insertPos++;
+        return true;
     }
 }
 
@@ -155,6 +217,7 @@ bool QS::createArray(int capacity) {
             delete[] myArray;
         }
         myArray = new int[capacity];
+        insertPos = 0;
         sizeOfArray = capacity;
         return true;
     }
@@ -165,6 +228,9 @@ bool QS::createArray(int capacity) {
 	* Resets the array to an empty or NULL state.
 	*/
 void QS::clear() {
-    delete [] myArray;
-    myArray = nullptr;
+    int* tmp = myArray;
+    delete[] tmp;
+    myArray = NULL;
+    insertPos = 0;
+    sizeOfArray = 0;
 }

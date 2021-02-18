@@ -15,6 +15,7 @@ public:
     QS();
     ~QS();
     void sortAll() override;
+    void quicksort(int left, int right);
     int medianOfThree(int left, int right) override;
     int partition(int left, int right, int pivotIndex) override;
     string getArray() const override;

@@ -26,29 +26,40 @@ int main() {
 
 	/* Test Code:
 	QS* testPtr = new QS;
-	if(testPtr->createArray(5)) {
+	if(testPtr->createArray(9)) {
 	    cout << "Created Array" << endl;
 	}
-	if(testPtr->addToArray(1)) {
-	    cout << "Added 1 to the array" << endl;
-	}
-    if(testPtr->addToArray(2)) {
-        cout << "Added 2 to the array" << endl;
-    }
-    if(testPtr->addToArray(3)) {
-        cout << "Added 3 to the array" << endl;
-    }
-    if(testPtr->addToArray(4)) {
-        cout << "Added 4 to the array" << endl;
-    }
-    if(testPtr->addToArray(5)) {
-        cout << "Added 5 to the array" << endl;
-    }
+	cout << "Adding 44,75,23,43,55,12,64,77,33 to array" << endl;
+	testPtr->addToArray(44);
+    testPtr->addToArray(75);
+    testPtr->addToArray(23);
+    testPtr->addToArray(43);
+    testPtr->addToArray(55);
+    testPtr->addToArray(12);
+    testPtr->addToArray(64);
+    testPtr->addToArray(77);
+    testPtr->addToArray(33);
     int size = testPtr->getSize();
     cout << "Size: " << size << "\n" << testPtr->getArray() << endl;
+    int pivot = testPtr->medianOfThree(0,8);
+    cout << "Sorted first, last, median array:\n" << testPtr->getArray() << endl;
+    cout << "Pivot Index: " << pivot << endl;
+    cout << "Testing partition..." << endl;
+    int down = testPtr->partition(0,8,pivot);
+    if(down==(-1)) {
+        cout << "Failure" << endl;
+    }
+    else {
+        cout << "Partitioned Array: " << testPtr->getArray() << endl;
+        cout << "Pivot Position: " << down << endl;
+    }
+    cout << "Attempting to sort array..." << endl;
+    testPtr->sortAll();
+    cout << testPtr->getArray() << endl;
     testPtr->clear();
     if(testPtr->getArray() == "") {
         cout << "Successful Clear" << endl;
+        cout << testPtr->getArray() << endl;
     }
     else {
         cout << testPtr->getArray() << endl;
